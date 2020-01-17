@@ -1,0 +1,89 @@
+.new-top
+{
+  top:20%;
+}
+.new-form-with-logo
+{
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+.background-mkt
+{
+  position: absolute;
+  top: 80px;
+  right: -12%;
+}
+
+.additional-materials {
+  margin-top: 79px;
+
+  &__title {
+    font-family: $boldFont;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    color: #0A143D;
+  }
+}
+
+.block-download-doc
+{
+  width: 100%;
+  height: 224px;
+  background: #2E56F6;
+  z-index: 8;
+  position: relative;
+  padding: 47px 0 27px 65px;
+  margin-top: 37px;
+  transition: .5s;
+  &:hover
+  {
+    background-color: #0A143D;
+  }
+}
+.doc-icon
+{
+  position: absolute;
+  bottom: 0;
+  right: 90px;
+}
+.description-head
+{
+  &__white
+  {
+    color: white;
+  }
+}
+.download-button
+{
+  display: flex;
+  align-items: center;
+  margin-top: 45px;
+}
+.doc-download-icon
+{
+  position: relative;
+  &:hover
+  {
+    cursor: pointer;
+  }
+}
+.download-arrow
+{
+  position: absolute;
+  bottom: 25px;
+  left: 21px;
+}
+.download-line
+{
+  position: absolute;
+  left: 13px;
+  top: 37px
+}
+.down
+{
+  transition: .4s;
+  top: 15px
+}

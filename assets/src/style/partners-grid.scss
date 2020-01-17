@@ -1,0 +1,70 @@
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 64px;
+    margin-top: 127px;
+
+    &__one {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        transition: .7s;
+
+        &:hover {
+            filter: brightness(.4);
+        }
+    }
+
+    &__two {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        margin-left: 74px;
+        transition: .7s;
+
+        &:hover {
+            filter: brightness(.4);
+        }
+    }
+
+    &__three {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: -1;
+        transition: .7s;
+
+        &:hover {
+            filter: brightness(.4);
+        }
+    }
+
+    &__four {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        margin-left: 55px;
+        transition: .7s;
+
+        &:hover {
+            filter: brightness(.4);
+        }
+    }
+
+    &__five {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        margin-top: 10px;
+        transition: .7s;
+
+        &:hover {
+            filter: brightness(.4);
+        }
+    }
+}

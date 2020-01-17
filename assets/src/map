@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Map</title>
+    <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script> -->
+    <!-- <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script> -->
+    <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+    <!-- <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" /> -->
+
+    <style>
+        #chartdiv {
+            width: 100%;
+            height: 800px;
+        }
+        
+        .disabled {
+            pointer-events: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="chartdiv"></div>
+
+    <script>
+        const regions = ['RU-AD', 'RU-ARK', 'RU-AST', 'RU-BA', 'RU-BEL', 'RU-BRY', 'RU-CE', 'RU-CHE', 'RU-CU', 'RU-DA',
+            'RU-IN',
+            'RU-IVA', 'RU-KB', 'RU-KC', 'RU-KDA', 'RU-KLU', 'RU-KR', 'RU-KL', 'RU-KHM', 'RU-KGD', 'RU-KO', 'RU-KRS',
+            'RU-KOS', 'RU-KGN', 'RU-KIR',
+            'RU-LEN', 'RU-LIP', 'RU-MOW', 'RU-ME', 'RU-MUR', 'RU-MO', 'RU-MOS', 'RU-NGR', 'RU-NEN', 'RU-SE',
+            'RU-NIZ', 'RU-ORE', 'RU-ORL', 'RU-OMS',
+            'RU-PER', 'RU-PSK', 'RU-PNZ', 'RU-ROS', 'RU-RYA', 'RU-SAM', 'RU-SMO', 'RU-SPE', 'RU-SAR', 'RU-STA',
+            'RU-SVE', 'RU-TAM', 'RU-TOM',
+            'RU-TUL', 'RU-TA', 'RU-TVE', 'RU-TYU', 'RU-UD', 'RU-ULY', 'RU-VGG', 'RU-VLA', 'RU-VLG', 'RU-VOR',
+            'RU-YAR', 'RU-YAN', 'RU-NVS'
+        ]
+
+        const enableAreas = regions.map((area) => {
+            return {
+                id: area,
+                color: '#CCCCCC'
+            }
+        })
+
+        // ссылка на codepen https://www.amcharts.com/demos-v3/location-sensitive-map-v3/
+
+        let map = AmCharts.makeChart('chartdiv', {
+            'type': 'map',
+            'theme': 'light',
+            'dataProvider': {
+                'mapURL': 'https://www.amcharts.com/lib/3/maps/svg/russiaHigh.svg',
+                'getAreasFromMap': true,
+                'zoomLevel': 0.9,
+                'areas': [...enableAreas]
+            },
+            'areasSettings': {
+                'autoZoom': true,
+                'rollOverOutlineColor': '#FFFFFF',
+                'rollOverColor': '#0b49d9',
+                'alpha': 0.8,
+                'unlistedAreasAlpha': 0
+            },
+            'zoomControl': {
+                'minZoomLevel': 0.9
+            },
+            'listeners': [{
+                'event': 'init',
+                'method': updateHeatmap
+            }]
+        });
+
+        function updateHeatmap(event) {
+
+            let source = document.querySelector('[href="http://www.amcharts.com/javascript-maps/"]')
+
+            hide(source)
+
+            let areas = event.chart.svgAreasById
+
+            for (let key in areas) {
+                if (regions.includes(key)) {
+                    areas[key].area.node.classList.add('disabled')
+                }
+            }
+        }
+
+        //heh
+        function hide(element) {
+            element.style.display = 'none'
+        }
+    </script>
+
+</body>
+
+</html>

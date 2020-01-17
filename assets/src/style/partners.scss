@@ -1,0 +1,18 @@
+.partners {
+    margin-top: 79px;
+
+    &__title {
+        font-family: $boldFont;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 44px;
+        color: #0A143D;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}

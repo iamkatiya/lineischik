@@ -1,0 +1,76 @@
+.general-information {
+
+    margin-top: 63px;
+    
+    &__h1 {
+        font-family: 'ProximaNova-Bold', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 44px;
+        color: #0A143D;
+        width: 925px;
+    }
+
+    &__p {
+        font-family: 'ProximaNova-Regular', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: #0A143D;
+        width: 944px;
+        margin-top: 20px;
+    }
+
+    &_swe {
+        position: relative;
+    }
+
+    &__items {
+        display: flex;
+        margin-top: 45px;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        display: flex;
+        background-color: #2E56F6;
+        width: 50%;
+        padding-top: 31px;
+        justify-content: space-evenly;
+        padding-bottom: 10px;
+        height: 224px;
+        border: 1px solid #5d7eff;
+        transition: .5s;
+        &:hover
+        {
+            background: #0A143D;
+            border: 1px solid #0A143D;
+        }
+    }
+
+    &__title {
+        font-family: $mainFont;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        color: #FFFFFF;
+    }
+
+    &__desc {
+        font-family: $mainFont;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 17px;
+        color: #FFFFFF;
+        width: 382px;
+    }
+
+    &__img {
+        width: 140px;
+        height: 140px;
+    }
+}

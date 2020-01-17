@@ -1,0 +1,282 @@
+.header-nav
+{
+  display: flex;
+  width: 100vw;
+  background-color: white;
+  position: fixed;
+  z-index: 20;
+  flex-wrap: nowrap;
+  font-family: ProximaNova-Regular, sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #0A143D;
+  padding: 0 47px 0 82px;
+  a
+  {
+    color: #0A143D;
+    &:hover
+    {
+      text-decoration: none!important;
+      color: #2E56F6;
+    }
+  }
+}
+.header-nav-logo
+{
+  padding: 12px 0 0 0;
+  flex: 1%;
+  margin-right: 87px;
+}
+.header-nav-menu
+{
+  display: flex;
+  flex-wrap: nowrap;
+  flex: 70%;
+  li
+  {
+    list-style: none;
+  }
+  padding: 42px 0;
+}
+.header-nav-contacts
+{
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 42px 0;
+  flex: 15%;
+  justify-content: flex-end;
+
+}
+.header-nav-contacts-number
+{
+  transition: .3s;
+}
+.header-nav-menu-items
+{
+  padding: 0 28px;
+  transition: .3s;
+  &_nested
+  {
+    background-image: url("../img/arrow-header-bottom.svg");
+    background-repeat: no-repeat;
+    background-size: 7px;
+    background-position-x: right;
+    background-position-y: center;
+    padding-right: 15px;
+    position: relative;
+    overflow: hidden;
+    margin-right: 20px;
+    &:hover
+    {
+      background-image: url("../img/menu-arrow-right.png");
+      background-repeat: no-repeat;
+    }
+  }
+}
+.header-nav-contacts-language
+{
+  opacity: .2;
+  transition: .3s;
+  &:hover
+  {
+    cursor: pointer;
+    opacity: 1;
+  }
+}
+.lang-active
+{
+  transition: .5s;
+  opacity: 1;
+}
+.header-nav-menu-relative
+{
+  position: relative;
+  &:hover
+  {
+    .header-nav-menu-absolute
+    {
+      opacity: 1;
+      visibility: visible;
+      left: 0;
+    }
+    .header-nav-menu-items_nested
+    {
+      background-image: url("../img/arrow-header-right.svg");
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.header-nav-menu-relative-last
+{
+  position: relative;
+  &:hover
+  {
+    .header-nav-menu-absolute-last
+    {
+      opacity: 1;
+      visibility: visible;
+      left: 0;
+    }
+    .header-nav-menu-items_nested
+    {
+      background-image: url("../img/arrow-header-right.svg");
+      background-repeat: no-repeat;
+    }
+  }
+}
+.header-nav-menu-absolute
+{
+  position: absolute;
+  top:20px;
+  flex-wrap: wrap;
+  transition: .5s;
+  padding: 60px 38px 27px 22px;
+  opacity: 0;
+  left: -20px;
+  width: 240px;
+  display: flex;
+  visibility: hidden;
+  background-color: white;
+  z-index: 2;
+  &::before
+  {
+    content: '';
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    top: 46px;
+    background: #2E56F6;
+  }
+}
+.transform-none
+{
+  color: #0A143D;
+  text-transform: none;
+  padding-top: 10px;
+  padding-left: 0;
+  padding-right: 0;
+  &:hover
+  {
+    color: #2E56F6;
+  }
+}
+.header-nav-menu-absolute-last
+{
+  position: absolute;
+  top:20px;
+  transition: .5s;
+  padding: 60px 38px 27px 22px;
+  opacity: 0;
+  left: -20px;
+  width: 153px;
+  display: flex;
+  flex-wrap: wrap;
+  visibility: hidden;
+  background-color: white;
+  z-index: 2;
+  &::before
+  {
+    content: '';
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    top: 46px;
+    background: #2E56F6;
+  }
+}
+.header-nav-mobile
+{
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  height: 90vh;
+  position: fixed;
+  padding: 20px 20px 120px 15px;
+  background: white;
+  z-index: 28;
+  top: -300%;
+}
+.burger-open
+{
+  top: 100px;
+}
+.burger-nav-menu-item
+{
+  font-family: 'ProximaNova-Bold', sans-serif;
+  color: #0A143D;
+  font-size: 26px;
+  margin-bottom: 26px;
+}
+.burger-nav-menu-items
+{
+  font-family: 'ProximaNova-Bold', sans-serif;
+  color: #2E56F6;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+.burger-flexbox-contacts
+{
+  font-family: "ProximaNova-Thin", sans-serif;
+  font-weight: 600;
+  color: #0A143D;
+  font-size: 16px;
+  margin: 10px 0;
+}
+.header-nav-burger
+{
+  width: 28px;
+  height: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.header-nav-burger-line-1
+{
+  height: 2px;
+  width: 100%;
+  background: #0A143D;
+  transition: .3s;
+  position: absolute;
+  bottom: 90%;
+  left: 0;
+}
+.burger-line-1
+{
+  transform: rotate(45deg);
+  bottom: 45%
+}
+.header-nav-burger-line-2
+{
+  height: 2px;
+  width: 100%;
+  background: #0A143D;
+  position: absolute;
+  top: 45%;
+  transition: .3s;
+  left: 0;
+}
+.burger-line-2
+{
+  left: -100%;
+}
+.header-nav-burger-line-3
+{
+  height: 2px;
+  width: 100%;
+  background: #0A143D;
+  position: absolute;
+  top: 90%;
+  transition: .3s;
+}
+.burger-line-3
+{
+  transform: rotate(-45deg);
+  top: 45%
+}
+.header-nav-logo-mob
+{
+  display: flex;
+}

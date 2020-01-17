@@ -1,0 +1,58 @@
+.application-industries-grid {
+    display: grid;
+    height: 289px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 64px;
+    grid-row-gap: 32px;
+    margin-top: 37px;
+
+    &-structure {
+        grid-template-columns: repeat(2, 1fr);
+        height: 284px;
+    }
+
+    &__item {
+        background-color: #2E56F6;
+        z-index: 2;
+        transition: .7s;
+
+        &-inside {
+            align-items: center;
+            display: flex;
+            height: 100%;
+            justify-content: space-evenly;
+        }
+
+        &-numb {
+            font-family: $lightFont;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 60px;
+            line-height: 73px;
+            color: #FFFFFF;
+        }
+        
+        &-name {
+            font-family: $mainFont;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            color: #FFFFFF;
+            width: 158px;
+            word-wrap: break-word;
+
+            &-structure {
+                width: 235px;
+            }
+        }
+
+    }
+
+    &_swe {
+        grid-template-rows: repeat(3, 1fr);
+        height: 448px;
+        margin-top: 35px;
+    }
+}

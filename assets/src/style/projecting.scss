@@ -1,0 +1,92 @@
+.text
+{
+  padding-right: 200px;
+  position: relative;
+}
+.projecting-banner-logo
+{
+  position: absolute;
+  top: 100px;
+  right: 20%;
+}
+.background
+{
+  position: absolute;
+  right: -30%;
+  top: 150px;
+  z-index: 0;
+}
+.keys-background
+{
+  position: absolute;
+  right: -30%;
+  top: 14%;
+  z-index: 0;
+}
+.installation-background
+{
+  position: absolute;
+  right: -40%;
+  top: 0;
+  z-index: 0;
+}
+.line1
+{
+  position: absolute;
+  top: 0;
+  left: calc((100% - 1270px) / 2);
+  width: 1px;
+  height: 100%;
+  background: white;
+  opacity: .1;
+}
+.line2
+{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background: white;
+  opacity: .1;
+}
+.line3
+{
+  position: absolute;
+  top: 0;
+  right: calc((100% - 1270px) / 2);
+  width: 1px;
+  height: 100%;
+  background: white;
+  opacity: .1;
+}
+.line4
+{
+  position: absolute;
+  top: 0;
+  left: calc((100% - 1264px) / 2);
+  width: .5px;
+  height: 100%;
+  background: black;
+  opacity: .1;
+}
+.line5
+{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: .5px;
+  height: 100%;
+  background: black;
+  opacity: .1;
+}
+.line6
+{
+  position: absolute;
+  top: 0;
+  right: calc((100% - 1264px) / 2);
+  width: .5px;
+  height: 100%;
+  background: black;
+  opacity: .1;
+}
